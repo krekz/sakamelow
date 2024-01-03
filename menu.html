@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <script src="header_footer.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  
+
+
+<section>
+<div class="container mt-2">
+	<div class="row justify-content-center  pt-5 rounded shadow" style="background-color: rgba(201, 196, 185, 0.418);" id="productRow">
+
+                                            <!-- All content here in menu2.js -->
+
+    <!-- <div class="col-sm-4 col-sm-4-menu">
+      <div class="card card-cascade card-ecommerce wider shadow mb-5" style=" margin-left: auto; margin-right: auto;">
+        <div class="view view-cascade overlay text-center">
+          <img class="card-img-top img-fluid w-75 rounded mt-5" src="${product.image}" alt="${product.name}">
+        </div>
+        <div class="card-body card-body-cascade text-center">
+          <h4 class="card-title"><strong>${product.name}</strong></h4>
+          <p class="card-text text-center" style="margin-left: auto; margin-right: auto;">${product.description}</p>
+          <p class="price fs-2 text-danger">RM${product.price}</p>
+          <div class="card-footer bg-transparent">
+            <button type="button" class="add-to-cart btn btn-warning p-2 w-100">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+    </div>
+
+    <div class="btn-group position-fixed  bottom-0 end-0 w-25 dropup" >
+      <button type="button" class="btn btn-secondary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false"  data-bs-auto-close="outside">
+        View Cart
+      </button>
+      
+      <ul class="dropdown-menu dropdown-menu-end w-100 "  style="height: 800px; max-height: 800px; transition: all 0.2s ease; z-index: -1;overflow-y: scroll;">
+        <div id="cart-dropdown" class=" d-flex flex-row justify-content-start p-4 mt-3 rounded " style="background-color: rgb(171, 178, 185); margin-left: 10px; width:490px ; text-decoration: none;">
+            <img src="images/bomboloni.png" class="img-fluid rounded " style="width: 35%;" >
+               <div class="cart-text " style="margin-left: 10px;">
+                  <h4 >Bomboloni</h4>
+                  <span><h5 id="quantity">Qty : 1</h5></span>
+                  <button class="btn rounded bg-danger ">-</button>
+                  <button class="btn rounded bg-success">+</button>
+               </div>
+               <h4 class="text text-center fw-bold " style="margin-left: 90px;">RM10</h4>
+        </div>
+      </ul>
+    </div>
+</div>
+</section>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+         <script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header{
+    margin-top: 30px;
+    background: rgb(231, 227, 216);
+
+    z-index: 1;
+}
+footer{
+    background: rgba(168, 162, 146, 0.514);
+ 
+}
+
+.navbar-nav a{
+    border-radius: 7px;
+
+}
+.navbar-nav a:hover{
+  
+    background-color: rgb(252, 252, 252);
+}
+
+.nav-link{
+    margin-left: 30px;
+}
+.navbar{
+    margin-top: -30px;
+    padding-left: 50px;
+}
+
+
+.navbar-nav {
+    margin-left: 25%;
+}
+section{
+  
+    width: 100%;
+    min-height: 100vh;
+     padding: 50px;
+     background: url(images/bg-main-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section-index{
+    background: url(images/bg6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wrapper{
+    padding: 100px;
+    width: 100%;
+}
+.text{
+    margin-top: 10%;
+}
+.wrapper-menu{
+    margin-top: 100px;  
+}
+nav .img-fluid {
+    width: 50px;
+    height:auto;
+    margin-right: 100px;
+}
+#navbar-2{
+    margin-left: 26%;
+}
+
+#btn-1:hover{
+    background-color: red;
+}
+#btn-2:hover{
+    background-color: black;
+}
+.col-sm-4 h2{
+    margin-top: 10px;
+}
+
+
+.carousel:hover{
+    transform: scale(1.05);
+}
+.carousel{
+    transition: all 0.2s ease;
+}
+
+/* menu page */
+.card:hover{
+    transform: scale(1.1);
+    background-color: rgba(131, 90, 90, 0.377);
+}
+.card{
+    transition: all 0.3s ease-in-out;
+    background-color: antiquewhite;
+}
+.item-list-btn button{
+    border: 50%;
+    background-color: rgb(192, 148, 148);
+}

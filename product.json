@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Oden",
+        "description": "oden dap",
+        "price": 10,
+        "image":"images/oden.png"
+    },
+    {
+        "id": 2,
+        "name": "Tauhu Begedil",
+        "description": "begedil dap",
+        "price": 10,
+        "image":"images/oden.png"
+    },
+    {
+        "id": 3,
+        "name": "Eclairs",
+        "description": "eclairs ni abende",
+        "price": 10,
+        "image":"images/eclairs.png"
+    },
+    {
+        "id": 4,
+        "name": "Bomboloni",
+        "description": "bomboloni dap",
+        "price": 10,
+        "image":"images/bomboloni.png"
+    },
+    {
+        "id": 5,
+        "name": "Choc. Milkshake",
+        "description": "coklat milkshake dap",
+        "price": 10,
+        "image":"images/coklat.png"
+    },
+    {
+        "id": 6,
+        "name": "Mango Milkshake",
+        "description": "mango milkshake dap",
+        "price": 10,
+        "image":"images/manga.png"
+    }
+    
+
+
+
+
+
+]
