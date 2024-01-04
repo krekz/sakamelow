@@ -2,49 +2,57 @@
     {
         "id": 1,
         "name": "Oden",
-        "description": "oden dap",
-        "price": 10,
-        "image":"images/oden.png"
+        "description": "Enjoy the warmth of oden soup, a popular dish from Family Mart.",
+        "price": 7,
+        "image": "images/oden.png"
     },
     {
         "id": 2,
         "name": "Tauhu Begedil",
-        "description": "begedil dap",
-        "price": 10,
-        "image":"images/oden.png"
+        "description": "Indulge in the deliciousness of begedil with a twist of tauhu goodness.",
+        "price": 4,
+        "image": "images/begedil.jpg"
     },
     {
         "id": 3,
         "name": "Eclairs",
-        "description": "eclairs ni abende",
-        "price": 10,
-        "image":"images/eclairs.png"
+        "description": "Savor the exquisite taste of eclairs, a delightful pastry from France.",
+        "price": 3,
+        "image": "images/eclairs.png"
     },
     {
         "id": 4,
         "name": "Bomboloni",
-        "description": "bomboloni dap",
-        "price": 10,
-        "image":"images/bomboloni.png"
+        "description": "Experience the deliciousness of bomboloni, a delightful Italian treat.",
+        "price": 3,
+        "image": "images/bomboloni.png"
     },
     {
         "id": 5,
-        "name": "Choc. Milkshake",
-        "description": "coklat milkshake dap",
-        "price": 10,
-        "image":"images/coklat.png"
+        "name": "Cheesetart",
+        "description": "Delight your taste buds with the richness of our cheesetart.",
+        "price": 2,
+        "image": "images/cheesetart.jpg"
     },
     {
         "id": 6,
+        "name": "Croissant",
+        "description": "Taste the perfect blend of croissant with a mix of Javanese flavors.",
+        "price": 4,
+        "image": "images/croissant.jpg"
+    },
+    {
+        "id": 7,
         "name": "Mango Milkshake",
-        "description": "mango milkshake dap",
-        "price": 10,
-        "image":"images/manga.png"
+        "description": "Refresh yourself with the tropical goodness of our mango milkshake.",
+        "price": 6,
+        "image": "images/manga.png"
+    },
+    {
+        "id": 8,
+        "name": "Choc. Milkshake",
+        "description": "Indulge in the richness of chocolate with our delectable chocolate milkshake.",
+        "price": 6,
+        "image": "images/coklat.png"
     }
-    
-
-
-
-
-
 ]

@@ -101,3 +101,7 @@ nav .img-fluid {
     border: 50%;
     background-color: rgb(192, 148, 148);
 }
+
+#dropdown-footer {
+    transition: all 0.3s ease; 
+}
