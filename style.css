@@ -47,19 +47,13 @@ section{
     background-size: cover;
 }
 .section-index{
-    background: url(images/bg6.png);
+    background: url(images/bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.wrapper{
-    padding: 100px;
-    width: 100%;
-}
+
 .text{
     margin-top: 10%;
-}
-.wrapper-menu{
-    margin-top: 100px;  
 }
 nav .img-fluid {
     width: 50px;
@@ -79,8 +73,6 @@ nav .img-fluid {
 .col-sm-4 h2{
     margin-top: 10px;
 }
-
-
 .carousel:hover{
     transform: scale(1.05);
 }

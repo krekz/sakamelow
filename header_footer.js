@@ -30,7 +30,7 @@ function includeHeaderAndFooter() {
     <div class="container-fluid text-center">
         <div class="row justify-content-center ">
           <div class="col">
-              <h2>sakamelow.com</h2>
+              <h2>sakamelow.vercel.app</h2>
           </div>
         </div>
         <div class="row">

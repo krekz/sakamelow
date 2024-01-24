@@ -32,7 +32,6 @@ fetch('product.json')
     });
   })
 let totalPrice=0;
-let newTotalPrice = totalPrice;
   function addToCart(product) {
     const cartDropdown = document.getElementById('dropdown-menu-parent');
   
@@ -41,7 +40,7 @@ let newTotalPrice = totalPrice;
   
     if (existingCartItem) {
       // if product in cart, just increase value
-      const quantityElement = existingCartItem.querySelector(`#quantity-${productId}`);
+      const quantityElement = document.querySelector(`#quantity-${productId}`);
       let currentQuantity = parseInt(quantityElement.innerText.split(' ')[2]);
       currentQuantity += 1;
 
@@ -61,9 +60,9 @@ let newTotalPrice = totalPrice;
       <img src="${product.image}" class="img-fluid rounded" style="width: 35%; height: auto;">
       <div class="cart-text" style="margin-left: 10px; flex-grow: 1;">
         <h4>${product.name}</h4>
-        <span><h5 id="quantity-${productId}">Qty : 1</h5></span>
-        <button onclick="changeQuantity(${productId}, '-')" class="btn rounded bg-danger">-</button>
-        <button onclick="changeQuantity(${productId}, '+')" class="btn rounded bg-success">+</button>
+        <span><h5 id="quantity">Qty : 1</h5></span>
+        <button id="minus" class="btn rounded bg-danger">-</button>
+        <button id="plus" class="btn rounded bg-success">+</button>
       </div>
       <h4 class="text text-center fw-bold" style="margin-left: auto;">RM${product.price}</h4>
       `;
@@ -72,19 +71,29 @@ let newTotalPrice = totalPrice;
       totalPrice += product.price;
           updateTotalPrice();
     }
+ 
+
   }
   
+  let plus = document.querySelector("#plus");
+  let minus = document.querySelector("#minus");
+  plus.addEventListener("click", function() {
+    changeQuantity(1, "+",product);
+  });
+  minus.addEventListener("click", function() {
+    changeQuantity(1, "-",product);
+  });
 
-function changeQuantity(productId, operation) {
-  const quantityElement = document.querySelector(`#quantity-${productId}`);
+function changeQuantity(productId, operation,product) {
+  const quantityElement = document.querySelector(`#quantity`);
   let currentQuantity = parseInt(quantityElement.innerText.split(' ')[2]);
  
   if (operation === '+') {
-    currentQuantity += 1;
-    newTotalPrice += totalPrice;
+    currentQuantity++;
+    totalPrice += 2;
   } else if (operation === '-') {
-    currentQuantity = Math.max(0, currentQuantity - 1);
-    newTotalPrice -= totalPrice;
+    currentQuantity--;;
+    totalPrice -= product.price;
   }
 
   if (currentQuantity === 0) {
@@ -98,7 +107,7 @@ function changeQuantity(productId, operation) {
 
 function updateTotalPrice() {
   const totalPriceElement = document.getElementById('total-price');
-  totalPriceElement.innerText = `RM${newTotalPrice}`;
+  totalPriceElement.innerText = `RM${totalPrice}`;
 }
 //pay now function alert
 function payNow() {
