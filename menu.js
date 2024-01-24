@@ -51,10 +51,8 @@ let totalPrice=0;
       // if no product in cart, then create new
       const cartItem = document.createElement('div');
       cartItem.id = `cart-item-${productId}`;
-      cartItem.classList.add('d-flex', 'flex-row', 'justify-content-start', 'p-4', 'mt-3', 'rounded', 'cart-dropdown');
+      cartItem.classList.add('d-flex', 'flex-row', 'justify-content-start', 'p-4', 'mt-3', 'rounded', 'cart-dropdown','w-sm-100','mx-3');
       cartItem.style.backgroundColor = 'rgb(171, 178, 185)';
-      cartItem.style.marginLeft = '10px';
-      cartItem.style.width = '490px';
       cartItem.style.textDecoration = 'none';
       cartItem.innerHTML = `
       <img src="${product.image}" class="img-fluid rounded" style="width: 35%; height: auto;">
