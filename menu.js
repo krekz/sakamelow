@@ -2,7 +2,6 @@ fetch('product.json')
   .then(response => response.json())
   .then(products => {
     const productRow = document.getElementById('productRow');
-
     products.forEach(product => {
       const card = document.createElement('div');
       card.classList.add('col-sm-4', 'col-sm-4-menu');
@@ -22,31 +21,27 @@ fetch('product.json')
           </div>
         </div>
       `;
-
       const addToCartButton = card.querySelector('.add-to-cart');
       addToCartButton.addEventListener('click', () => {
         addToCart(product);
       });
-
       productRow.appendChild(card);
     });
   })
 let totalPrice=0;
   function addToCart(product) {
     const cartDropdown = document.getElementById('dropdown-menu-parent');
-  
     const productId = product.id; 
+    const productPrice = product.price;
     const existingCartItem = document.querySelector(`#cart-item-${productId}`);
   
     if (existingCartItem) {
       // if product in cart, just increase value
       const quantityElement = document.querySelector(`#quantity-${productId}`);
       let currentQuantity = parseInt(quantityElement.innerText.split(' ')[2]);
-      currentQuantity += 1;
-
+      currentQuantity++
       quantityElement.innerText = `Qty : ${currentQuantity}`;
-      totalPrice += product.price;
-          updateTotalPrice();
+      totalPrice += productPrice;
     } else {
       // if no product in cart, then create new
       const cartItem = document.createElement('div');
@@ -58,61 +53,44 @@ let totalPrice=0;
       <img src="${product.image}" class="img-fluid rounded" style="width: 35%; height: auto;">
       <div class="cart-text" style="margin-left: 10px; flex-grow: 1;">
         <h4>${product.name}</h4>
-        <span><h5 id="quantity">Qty : 1</h5></span>
-        <button id="minus" class="btn rounded bg-danger">-</button>
-        <button id="plus" class="btn rounded bg-success">+</button>
+        <span><h5 id="quantity-${productId}">Qty : 1</h5></span>
+        <button onClick="changeQuantity(${productId}, '-',${productPrice})" id="minus" class="btn rounded bg-danger">-</button>
+        <button onClick="changeQuantity(${productId}, '+',${productPrice} )" id="plus" class="btn rounded bg-success">+</button>
       </div>
-      <h4 class="text text-center fw-bold" style="margin-left: auto;">RM${product.price}</h4>
+      <h4 class="text text-md-center fw-bold" style="margin-left: auto;">RM${product.price}</h4>
       `;
-  
       cartDropdown.appendChild(cartItem);
-      totalPrice += product.price;
-          updateTotalPrice();
+      totalPrice += productPrice;
     }
- 
-
   }
   
-  let plus = document.querySelector("#plus");
-  let minus = document.querySelector("#minus");
-  plus.addEventListener("click", function() {
-    changeQuantity(1, "+",product);
-  });
-  minus.addEventListener("click", function() {
-    changeQuantity(1, "-",product);
-  });
-
-function changeQuantity(productId, operation,product) {
-  const quantityElement = document.querySelector(`#quantity`);
+function changeQuantity(product , operation,price) {
+  const quantityElement = document.querySelector(`#quantity-${product}`);
   let currentQuantity = parseInt(quantityElement.innerText.split(' ')[2]);
  
   if (operation === '+') {
     currentQuantity++;
-    totalPrice += 2;
+    totalPrice += price;
   } else if (operation === '-') {
     currentQuantity--;;
-    totalPrice -= product.price;
+    totalPrice -= price;
   }
 
   if (currentQuantity === 0) {
-    const cartItem = document.getElementById(`cart-item-${productId}`);
+    const cartItem = document.getElementById(`cart-item-${product}`);
     cartItem.parentNode.removeChild(cartItem);
   } else {
     quantityElement.innerText = `Qty : ${currentQuantity}`;
   }
-  updateTotalPrice();
 }
 
-function updateTotalPrice() {
-  const totalPriceElement = document.getElementById('total-price');
-  totalPriceElement.innerText = `RM${totalPrice}`;
-}
+
 //pay now function alert
 function payNow() {
   if(totalPrice==0){
-    alert('No item in cart');
+    alert('Barang takde nak bayar ape !!');
   }else{
-  alert('Thank you for your order!  Please pay at the counter     You need to pay RM'+totalPrice);
+  alert('Terima kasih ye hiok hiok total anda : RM'+totalPrice);
   }
 
 }
